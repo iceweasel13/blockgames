@@ -3,24 +3,29 @@ import logo from "../../pictures/logo.png";
 import { ConnectWallet } from "@thirdweb-dev/react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css";
+import { Link } from "react-router-dom";
+import Home from "../Home/Home";
 function Header() {
   return (
     <nav
-      className="navbar navbar-expand-lg p-2"
+      className="navbar navbar-expand-lg p-2 header"
       style={{ backgroundColor: "rgb(243, 222, 61)" }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand">
+          <Link to={Home}></Link>
           <img
             src={logo}
             className="rounded"
-            alt="image"
+            alt="logo"
             width="40"
             height="35"
           />
         </a>
-        <a className="navbar-brand fw-bold" href="#">
-          BlockGames
+        <a className="brand navbar-brand fw-bold">
+          <Link to={Home} style={{ color: "black" }}>
+            {"Block Games "}
+          </Link>
         </a>
         <button
           className="navbar-toggler"
@@ -39,32 +44,32 @@ function Header() {
         >
           <ul className="navbar-nav">
             <li className="nav-item mx-4">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item mx-4">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/games">
                 Games
-              </a>
+              </Link>
             </li>
             <li className="nav-item mx-4">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/about">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item mx-4">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/more">
                 More
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
 
         <div className="d-flex flex-row-reverse p-2" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <ConnectWallet />
+            <li className="nav-item connectwallet">
+              <ConnectWallet theme="dark" btnTitle="Connect Wallet" />
             </li>
           </ul>
         </div>

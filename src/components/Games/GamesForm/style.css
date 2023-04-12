@@ -1,0 +1,24 @@
+.gri-kare {
+  background-color: #191717;
+  height: 500px;
+  margin-top: 100px;
+}
+.high-scores-table thead th {
+  color: red;
+  border: none;
+  align-items: center;
+  text-align: center;
+  font-family: "Press Start 2P", sans-serif;
+}
+.high-scores-table tbody td {
+  color: rgb(255, 255, 255);
+  border: none;
+  align-items: center;
+  text-align: center;
+  font-family: "Press Start 2P", sans-serif;
+}
+.baslik {
+  font-family: "Press Start 2P", sans-serif;
+  color: aliceblue;
+  padding-top: 50px;
+}
